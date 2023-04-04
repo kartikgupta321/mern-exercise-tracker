@@ -13,8 +13,14 @@ router.route('/add').post((req, res) => {
     const newUser = new User({username});
 
     newUser.save()
-        .then(() => res.json('User added! '))
+        .then(() => res.json('User added!'))
         .catch(err => res.status(400).json('Error: ' + err));
 });
 
 module.exports = router;
+
+let string ={
+    "name" : "katik",
+    "no" : "133434"
+};
+console.log(string);

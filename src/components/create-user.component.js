@@ -12,20 +12,17 @@ export default class CreateUser extends Component {
       username: ''
     }
   }
-
   onChangeUsername(e) {
     this.setState({
       username: e.target.value
     })
   }
-
   onSubmit(e) {
     e.preventDefault();
 
     const user = {
       username: this.state.username
     }
-
     console.log(user);
 
     axios.post('http://localhost:5000/users/add', user)
@@ -35,7 +32,6 @@ export default class CreateUser extends Component {
       username: ''
     })
   }
-
   render() {
     return (
       <div>
